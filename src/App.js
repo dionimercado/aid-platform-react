@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { Redirect, Route } from "react-router-dom";
+import "./App.css";
+import { Login, Home } from "./pages";
+import { Header } from "./components/Layout";
+import Context from "./context";
+import { useEffect, useContext } from "react";
 
 function App() {
+  const { state } = useContext(Context);
+
+  useEffect(() => {}, []);
+
+  console.log({ state });
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      {!state.user.token ? (
+        <Route path="/" component={Login} />
+      ) : (
+        <Route exact path="/" component={Home} />
+      )}
+    </>
   );
 }
 

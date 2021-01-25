@@ -1,0 +1,36 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "type": "One Time 1",
+      "description": "Description One",
+      "lat": 42.70910094905728,
+      "lng": -71.17220697947928
+    },
+    {
+      "id": 2,
+      "type": "One Time 2",
+      "description": "Description Two",
+      "lat": 42.72920094905728,
+      "lng": -71.17220697947928
+    },
+    {
+      "id": 3,
+      "type": "One Time 3",
+      "description": "Description Three",
+      "lat": 42.71930094905728,
+      "lng": -71.18220697947928
+    },
+    {
+      "id": 4,
+      "type": "One Time 4",
+      "description": "Description Four",
+      "lat": 42.71940094905728,
+      "lng": -71.19220697947928
+    }
+  ],
+  "users": [
+    { "id": 1, "email": "me@email.com", "password": "12345" },
+    { "id": 2, "email": "you@email.com", "password": "123456" }
+  ]
+}
